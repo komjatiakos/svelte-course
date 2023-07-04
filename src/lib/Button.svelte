@@ -4,14 +4,19 @@
 
 <button><slot>Fallback</slot></button>
 
-<style>
-    button{
-        border:none;
+<style lang="scss">
+    @use '../styles/variables.scss';
+    button {
+        border: none;
         background-color: orange;
-        color:#fff;
+        color: #fff;
         padding: 15px 20px;
         font-weight: bold;
         border-radius: 5px;
         cursor: pointer;
+        &:hover {
+            background-color: variables.$color_main;
+            color: #000;
+        }
     }
 </style>
