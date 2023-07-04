@@ -1,7 +1,12 @@
 <script>
-    let count = 0
+    export let initialCount;
+    export let maxCount;
+
+    let count = initialCount;
     function increment () {
-        count += 1
+        if(count < maxCount){
+            count += 1
+        }
     }
     /*
     let count2 = 0;
