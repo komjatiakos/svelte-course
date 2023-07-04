@@ -1,5 +1,6 @@
 <script>
     import Counter from "./lib/Counter.svelte";
+    import Button from "./lib/Button.svelte";
 
     const props = {
         maxCount:10,
@@ -7,8 +8,8 @@
     }
 </script>
 
-<Counter {...props} y="y"/>
+<!--<Counter {...props} y="y"/>-->
+<Button >Button text</Button> 
 
 <style>
-
 </style>

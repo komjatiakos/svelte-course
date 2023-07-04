@@ -2,7 +2,7 @@
     export let initialCount;
     export let maxCount;
 
-    console.log($$props, $$restProps); //anything else what is not defined in the component in this example y
+    console.log($$props, $$restProps); //anything what is not defined in the component in this example y
 
     let count = initialCount;
     function increment () {
