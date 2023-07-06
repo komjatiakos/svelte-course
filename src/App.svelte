@@ -11,7 +11,14 @@
 </script>
 
 <!--<Counter {...props} y="y"/>-->
-<Button on:click|once={(event) => {alert(true);}} let:isLeftHovered size="small" shadow bgColor="black" textColor="white">
+<Button
+    on:click|once={(event) => {alert(true);}}
+    let:isLeftHovered
+    size="small"
+    shadow bgColor="black"
+    textColor="white"
+    disabled
+>
     <div style:width="50px" slot="leftContent">
     {#if isLeftHovered}
         <FaAmazonPay/>

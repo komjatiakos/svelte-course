@@ -4,12 +4,14 @@
     export let shadow = false;
     export let bgColor = "inherit";
     export let textColor = "inherit";
-    
+    //export let disabled = false;
+
     let isLeftHovered = false;
 </script>
 
 <button
     on:click
+    {...$$restProps}
     style:--buttonBgColor={bgColor}
     style:--buttonTextColor={textColor}
     class:size-lg={size === "large"} 
@@ -55,6 +57,10 @@
         }
         &.shadow{
             box-shadow: 0 0 50px rgba(1,1,1,0);
+        }
+        &.disabled{
+            opacity: 0.5;
+            cursor: not-allowed;
         }
     }
 </style>
