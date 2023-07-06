@@ -6,10 +6,10 @@
     export let textColor = "inherit";
     
     let isLeftHovered = false;
-    //console.log($$slots)
 </script>
 
 <button
+    on:click
     style:--buttonBgColor={bgColor}
     style:--buttonTextColor={textColor}
     class:size-lg={size === "large"} 

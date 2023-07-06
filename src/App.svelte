@@ -11,12 +11,12 @@
 </script>
 
 <!--<Counter {...props} y="y"/>-->
-<Button let:isLeftHovered size="small" shadow bgColor="black" textColor="white">
-    <div style:width="50px" slot="leftContent" let:y>
+<Button on:click|once={(event) => {alert(true);}} let:isLeftHovered size="small" shadow bgColor="black" textColor="white">
+    <div style:width="50px" slot="leftContent">
     {#if isLeftHovered}
-        <FaAmazonPay/>{y}
+        <FaAmazonPay/>
     {:else}
-        <FaAws/>{y}
+        <FaAws/>
     {/if}
     </div>
     Button text
