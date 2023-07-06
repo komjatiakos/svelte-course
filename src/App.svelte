@@ -1,4 +1,24 @@
 <script>
+    import TodoList from "./lib/TodoList.svelte";
+    import {v4 as uuid} from "uuid";
+    const todos = [
+        {
+            id:uuid(),
+            title:"Todo 1",
+            completed:true
+        },
+        {
+            id:uuid(),
+            title:"Todo 2",
+            completed:true
+        },
+        {
+            id:uuid(),
+            title:"Todo 3",
+            completed:false
+        }
+    ]
+    /*
     import Counter from "./lib/Counter.svelte";
     import Button from "./lib/Button.svelte";
     import FaAws from 'svelte-icons/fa/FaAws.svelte'
@@ -8,10 +28,12 @@
         maxCount:10,
         initialCount:5
     }
+    */
+
 </script>
 
 <!--<Counter {...props} y="y"/>-->
-<Button
+<!--<Button
     on:click|once={(event) => {alert(true);}}
     let:isLeftHovered
     size="small"
@@ -27,7 +49,7 @@
     {/if}
     </div>
     Button text
-</Button> 
-
+</Button>--> 
+<TodoList {todos}/>
 <style>
 </style>
