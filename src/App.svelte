@@ -8,8 +8,7 @@
     }
 </script>
 
-<!--<Counter {...props} y="y"/>-->
-<Button >Button text</Button> 
+<Button size="large" shadow>Button text</Button> 
 
 <style>
 </style>
