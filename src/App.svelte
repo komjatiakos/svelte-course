@@ -18,7 +18,11 @@
             completed:false
         }
     ]
-    $:console.log(todos);
+
+    function handleAddTodo(event){
+        //event.preventDefault();
+        console.log(event.detail.title)
+    }
     /*
     import Counter from "./lib/Counter.svelte";
     import Button from "./lib/Button.svelte";
@@ -52,6 +56,6 @@
     Button text
 </Button>--> 
 <h2> {todos.length} Todos</h2>
-<TodoList bind:todos/>
+<TodoList {todos} on:addtodo={handleAddTodo}/>
 <style>
 </style>
